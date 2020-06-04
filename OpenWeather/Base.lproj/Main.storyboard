@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Open Weather View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="OpenWeatherViewController" customModule="OpenWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzI-bs-qON">
+                                <rect key="frame" x="0.0" y="34" width="414" height="828"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="BBA-Vz-6sK">
+                                        <rect key="frame" x="20" y="20" width="374" height="322"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xCT-eZ-bax">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6f7-d7-iXd">
+                                                        <rect key="frame" x="20" y="10" width="70" height="70"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="70" id="QIS-dO-5tX"/>
+                                                            <constraint firstAttribute="width" secondItem="6f7-d7-iXd" secondAttribute="height" multiplier="1:1" id="mrD-X1-LjR"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mTD-gp-yuq">
+                                                        <rect key="frame" x="204" y="10" width="150" height="80"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Q8G-Mg-W2G">
+                                                                <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRl-1Q-bek">
+                                                                <rect key="frame" x="0.0" y="50" width="150" height="30"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="mTD-gp-yuq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6f7-d7-iXd" secondAttribute="trailing" constant="20" id="561-Yy-8Kb"/>
+                                                    <constraint firstItem="6f7-d7-iXd" firstAttribute="top" secondItem="xCT-eZ-bax" secondAttribute="top" constant="10" id="D1g-qI-qwJ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="mTD-gp-yuq" secondAttribute="bottom" constant="10" id="MV3-Ch-PXx"/>
+                                                    <constraint firstItem="6f7-d7-iXd" firstAttribute="leading" secondItem="xCT-eZ-bax" secondAttribute="leading" constant="20" id="oUg-35-3eC"/>
+                                                    <constraint firstItem="mTD-gp-yuq" firstAttribute="top" secondItem="xCT-eZ-bax" secondAttribute="top" constant="10" id="uNV-Uz-C3P"/>
+                                                    <constraint firstAttribute="trailing" secondItem="mTD-gp-yuq" secondAttribute="trailing" constant="20" id="zbK-ri-Db9"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xmd-MV-qQK" customClass="DotChart" customModule="OpenWeather" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="120" width="374" height="202"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Xmd-MV-qQK" secondAttribute="height" multiplier="1.85" id="e5m-oL-h0R"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="Vsx-X5-IO1"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="BBA-Vz-6sK" secondAttribute="trailing" constant="20" id="FoA-Qw-qYj"/>
+                                    <constraint firstItem="BBA-Vz-6sK" firstAttribute="centerX" secondItem="rzI-bs-qON" secondAttribute="centerX" id="JLh-aN-6NB"/>
+                                    <constraint firstItem="BBA-Vz-6sK" firstAttribute="top" secondItem="rzI-bs-qON" secondAttribute="top" constant="20" id="aOY-BD-fzp"/>
+                                    <constraint firstAttribute="bottom" secondItem="BBA-Vz-6sK" secondAttribute="bottom" id="emo-AW-jJT"/>
+                                    <constraint firstItem="BBA-Vz-6sK" firstAttribute="leading" secondItem="rzI-bs-qON" secondAttribute="leading" constant="20" id="mrd-in-zXV"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rzI-bs-qON" secondAttribute="trailing" id="BEu-lK-Cp8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rzI-bs-qON" secondAttribute="bottom" id="XBS-JX-55v"/>
+                            <constraint firstItem="rzI-bs-qON" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ePc-s5-1Uv"/>
+                            <constraint firstItem="rzI-bs-qON" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xT0-zR-oXE"/>
+                            <constraint firstItem="rzI-bs-qON" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xwO-72-Tvj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="dotChart" destination="Xmd-MV-qQK" id="ci1-79-Rxw"/>
+                        <outlet property="imgWeatherIcon" destination="6f7-d7-iXd" id="9bm-8z-LoZ"/>
+                        <outlet property="lblCurrentTemp" destination="Q8G-Mg-W2G" id="KUc-68-9xj"/>
+                        <outlet property="lblFeelsLike" destination="dRl-1Q-bek" id="dzr-oJ-mru"/>
+                        <outlet property="stackViewContent" destination="BBA-Vz-6sK" id="JF5-wU-m3h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="127.90178571428571"/>
+        </scene>
+    </scenes>
+</document>
